@@ -68,7 +68,7 @@ class ProdutoController extends RenderView
                 return;
             }
         } else {
-            $imageUrl = $produto['url'];
+            $imageUrl = $produto['current_image_url'];
         }
 
         $produtoData = [
@@ -82,6 +82,7 @@ class ProdutoController extends RenderView
         $produtoDAO = new ProdutoDAO();
         $produtoDAO->update($produto['id'], $produtoData);
     }
+
 
     public function destroy($produto)
     {

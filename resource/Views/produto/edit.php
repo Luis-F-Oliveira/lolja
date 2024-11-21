@@ -30,7 +30,7 @@
 
             <div class="mb-3">
                 <label for="status" class="form-label">Status</label>
-                <select class="form-select" id="status" name="status" required>
+                <select class="form-select" id="status" name="stats" required>
                     <option value="1" <?= $data->stats == 1 ? 'selected' : '' ?>>Ativo</option>
                     <option value="0" <?= $data->stats == 0 ? 'selected' : '' ?>>Inativo</option>
                 </select>
@@ -44,6 +44,8 @@
             <div class="mb-3">
                 <img id="product-image" src="<?= '../../container/' . basename($data->url) ?>" alt="Imagem do Produto" class="img-fluid" style="max-width: 100px; height: 100px; display: block;">
             </div>
+
+            <input type="hidden" name="current_image_url" value="<?= htmlspecialchars($data->url) ?>">
 
             <div class="d-flex justify-content-between">
                 <button type="submit" class="btn btn-primary">Salvar Produto</button>
