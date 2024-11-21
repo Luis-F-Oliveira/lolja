@@ -5,7 +5,7 @@ namespace Config;
 use PDO;
 use PDOException;
 
-Dotenv::load(__DIR__ . '../.env');
+Dotenv::load(__DIR__ . '/../.env');
 
 class Database
 {

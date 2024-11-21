@@ -1,9 +1,12 @@
 <?php
 
-require_once __DIR__ . '/bootstrap/app.php';
+require_once __DIR__ . '/core/app.php';
 require_once __DIR__ . '/routes/web.php';
 
-use Bootstrap\App;
+use Core\App;
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', '/', $class);
